@@ -11,7 +11,12 @@ type AllType = {
   weight: number
 }
 
-function compare (top, bottom): AllType {
+type SameType = {
+  top:string,
+  bottom:string
+}
+
+function compare<T extends AllType>(top: Pick<T, keyof AllType>, bottom: Pick<T, keyof AllType>): AllType {
   return {
     name: top.name,
     color: top.color,
