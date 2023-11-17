@@ -22,7 +22,6 @@ type Form = {
 type Params = Omit<Form, "errors">;
 
 /* або варіант 2:*/
-
 // type Params = Pick<Form, Exclude<keyof Form, "errors">>;
 
 export {};
